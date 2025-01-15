@@ -2,5 +2,7 @@
   "item.tutorial.pink_garnet": "Pink Garnet",
   "item.tutorial.raw_pink_garnet": "Raw Pink Garnet",
   "block.tutorial.pink_garnet_block": "Pink Garnet Block",
-  "block.tutorial.raw_pink_garnet_block": "Raw Pink Garnet Block"
+  "block.tutorial.raw_pink_garnet_block": "Raw Pink Garnet Block",
+  "itemgroup.tutorial.pink_garnet_items": "Pink Garnet Items",
+  "itemgroup.tutorial.pink_garnet_blocks": "Pink Garnet Blocks"
 }
