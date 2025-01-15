@@ -1,5 +1,6 @@
 package net.cjcrispy;
 
+import net.cjcrispy.Blocks.ModBlocks;
 import net.cjcrispy.item.ModItems;
 import net.fabricmc.api.ModInitializer;
 
@@ -14,5 +15,6 @@ public class Tutorial implements ModInitializer {
 	@Override
 	public void onInitialize() {
 		ModItems.registerModItem();
+		ModBlocks.registerModBlocks();
 	}
 }
