@@ -1,5 +1,6 @@
 package net.cjcrispy.Blocks;
 
+import net.cjcrispy.Blocks.custom.MagicBlock;
 import net.cjcrispy.Tutorial;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.block.AbstractBlock;
@@ -36,6 +37,10 @@ public class ModBlocks {
             new ExperienceDroppingBlock(UniformIntProvider.create(3, 6),
                     AbstractBlock.Settings.create().strength(4f).requiresTool().sounds(BlockSoundGroup.DEEPSLATE)));
 
+    // Magic Block
+    public static final Block MAGIC_BLOCK = registerBlock("magic_block",
+            new MagicBlock(AbstractBlock.Settings.create().strength(1f).requiresTool()));
+
 
     // Helper Methods
     // 1. associate block with item
@@ -61,6 +66,8 @@ public class ModBlocks {
 
             entries.add(ModBlocks.PINK_GARNET_ORE);
             entries.add(ModBlocks.PINK_GARNET_DEEPSLATE_ORE);
+
+            entries.add(ModBlocks.MAGIC_BLOCK);
         });
     }
 }
