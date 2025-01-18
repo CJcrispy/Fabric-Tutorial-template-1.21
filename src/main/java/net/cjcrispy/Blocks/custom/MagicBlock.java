@@ -1,6 +1,7 @@
 package net.cjcrispy.Blocks.custom;
 
 import net.cjcrispy.item.ModItems;
+import net.cjcrispy.util.ModTags;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.client.gui.screen.Screen;
@@ -41,13 +42,17 @@ public class MagicBlock extends Block {
     // When "Raw Pink Garnet" is thrown on block it will transform into a diamond block
     @Override
     public void onSteppedOn(World world, BlockPos pos, BlockState state, Entity entity) {
-        if(entity instanceof ItemEntity item) {
-            if(item.getStack().getItem() == ModItems.RAW_PINK_GARNET){
-                item.setStack(new ItemStack(Items.DIAMOND, item.getStack().getCount()));
+        if(entity instanceof ItemEntity itemEntity) {
+            if(isValidItem(itemEntity.getStack())) {
+                itemEntity.setStack(new ItemStack(Items.DIAMOND, itemEntity.getStack().getCount()));
             }
         }
 
         super.onSteppedOn(world, pos, state, entity);
+    }
+
+    private boolean isValidItem(ItemStack stack) {
+        return stack.isIn(ModTags.Items.TRANSFORMABLE_ITEMS);
     }
 
     // Method 1 for adding Tooltips
