@@ -1,6 +1,7 @@
 package net.cjcrispy.datagen;
 
 import net.cjcrispy.Blocks.ModBlocks;
+import net.cjcrispy.util.ModTags;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
 import net.minecraft.registry.RegistryWrapper;
@@ -24,5 +25,9 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
 
         getOrCreateTagBuilder(BlockTags.NEEDS_IRON_TOOL)
                 .add(ModBlocks.PINK_GARNET_DEEPSLATE_ORE);
+
+        getOrCreateTagBuilder(ModTags.Blocks.NEEDS_PINK_GARNET_TOOL)
+                .add(ModBlocks.MAGIC_BLOCK)
+                .addTag(BlockTags.NEEDS_IRON_TOOL);
     }
 }
