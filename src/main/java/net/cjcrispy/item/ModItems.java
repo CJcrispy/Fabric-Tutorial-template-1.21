@@ -4,14 +4,27 @@ import net.cjcrispy.Tutorial;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroups;
+import net.minecraft.item.ItemStack;
+import net.minecraft.item.tooltip.TooltipType;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
+import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
+
+import java.util.List;
 
 public class ModItems {
 
     // Items
-    public static final Item PINK_GARNET = registerItem("pink_garnet", new Item(new Item.Settings()));
+    public static final Item PINK_GARNET = registerItem("pink_garnet", new Item(new Item.Settings()){
+
+        // Method 2 for adding tooltips
+        @Override
+        public void appendTooltip(ItemStack stack, TooltipContext context, List<Text> tooltip, TooltipType type) {
+            tooltip.add(Text.translatable("tooltip.tutorial.pink_garnet"));
+            super.appendTooltip(stack, context, tooltip, type);
+        }
+    });
     public static final Item RAW_PINK_GARNET = registerItem("raw_pink_garnet", new Item((new Item.Settings())));
 
     // helper method

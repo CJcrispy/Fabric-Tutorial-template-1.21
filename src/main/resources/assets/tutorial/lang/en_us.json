@@ -12,5 +12,9 @@
 
 
   "itemgroup.tutorial.pink_garnet_items": "Pink Garnet Items",
-  "itemgroup.tutorial.pink_garnet_blocks": "Pink Garnet Blocks"
+  "itemgroup.tutorial.pink_garnet_blocks": "Pink Garnet Blocks",
+
+  "tooltip.tutorial.pink_garnet": "This is PINK GARNET",
+  "tooltip.tutorial.magic_block.shift_down": "This §9BLOCK§r is a lie",
+  "tooltip.tutorial.magic_block.no_shift": "Press §eShift§r for more information"
 }
